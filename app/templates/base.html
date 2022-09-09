@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} {% endblock %}</title>
+    {% block link %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock link %}
+</head>
+<body>
+        <!-- navbar start -->
+        <header class="topnav">
+            <div class="topnav--subsection">
+              <nav class="menu">
+                <a class="active" href="#">Главная</a>
+                <a href="{% url 'index' %}">Подики</a>
+                <a href="{% url 'liquid_list' %}">Жидкости</a>
+                <a href="#">заглушка</a>
+              </nav>
+              <!-- / .menu -->
+
+              <nav class="branding">
+                <a href="#">түтүн</a>
+              </nav>
+              <!-- / .branding -->
+
+              <nav class="user-engagement">
+                <a href="#">Профиль</a>
+                <a href="#">Корзина</a>
+                <a href="#">Контакты</a>
+              </nav>
+              <!-- / .user-engagement -->
+              <a class="icon" href="#"></a>
+            </div>
+        </header>
+        <!-- navbar end -->
+        <div class="container">
+
+            {% block content %}
+            {% endblock content %}
+
+            <!-- footer start-->
+            <footer class="main-footer">
+            <nav>
+              <h3>Customer Service</h3>
+              <ul>
+                <li><a href="#">Help & Contact Us</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+                <li><a href="#">Online Stores</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <h3>Customer Service</h3>
+              <ul>
+                <li><a href="#">Help & Contact Us</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+                <li><a href="#">Online Stores</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <h3>Customer Service</h3>
+              <ul>
+                <li><a href="#">Help & Contact Us</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+                <li><a href="#">Online Stores</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <h3>Customer Service</h3>
+              <ul>
+                <li><a href="#">Help & Contact Us</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+                <li><a href="#">Online Stores</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </nav>
+          </footer>
+            <!-- footer end-->
+        </div>
+        {% block script %}
+        {% endblock script %}
+</body>
+</html>

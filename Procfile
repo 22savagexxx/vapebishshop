@@ -1,0 +1,1 @@
+web: gunicorn VapeShop.wsgi -- log-file-
